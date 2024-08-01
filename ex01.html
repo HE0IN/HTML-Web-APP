@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>자바스크립트 개요</title>
+    <!-- html 주석문 CTRL + /
+    java script 공식 명칭 :ECMA Script
+    제작인 : 썬마이크로 시스템즈 + 넷스케이프 (브랜든 아이크)
+    java 언어와 java sript는 전혀 다른 언어
+    ES6 버전에서 문법이 완성 됨.
+    html 웹브라우저에서 실행되는 유일한 언어
+
+    js를 구동 시키는 방법
+    1. Web 브라우저(크롬,엣지,사파리)에서 html안에서 구동
+    2. node.js(런타임 환경 크롬의 V8엔진)로 구동
+     1) 백엔드 시도 - 서버pc - express 
+     2) 프론트엔드 시도 - html을 대신해 뷰템플릿 - 리액트.js, Vue.js 앵귤러.js
+    
+    html안에서 js의 역할
+    동적인 웹을 만드는 역할
+    1. 사용자(유저)의 동작(클릭, 스크롤, 입력 등)에 반응함
+    2. 서버와 직접 통신 가능 - AJAX 통신 - 데이터의 갱신
+
+    JS 선언하는 방법
+    1. <Script> 태그 안에서 : head, body 태그 안에서
+    2. html 요소 태그 안에서 속성으로 선언 : onclick, href 등
+    3. 별도의 .js 파일을 만들고 그 파일을 import 해서 사용 -->
+    <script>
+      console.log("hello js1");
+    </script>
+  </head>
+  <body>
+    <h1>hello JS!</h1>
+    <a href="javascript:alert('클릭하셨어요?')">클릭하세요!</a> <br />
+    <button onclick="alert('또 클릭하셨어요?')">클릭하세요!!</button> <br />
+    <img
+      src="apple.png"
+      alt="사과"
+      width="100"
+      height="100"
+      onmouseover="this.src='banana.png'"
+      onmouseout="this.src='apple.png'"
+    />
+    <script>
+      console.log("hello js2");
+    </script>
+  </body>
+</html>
