@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        //디스코드 DM으로 제출
+        //문제 1. prompt함수를 이용하여 사용자로부터 문자열 (아라비아 숫자 0 ~ 9)을 입력받는다.
+        //   그 문자열을 숫자형으로 변환 후 그 수에 * 2를 해서 콘솔에 출력하시오.
+        let number = prompt('숫자를 입력하세요.');
+        let Intnum = parseInt(number);
+        console.log('입력된 숫자는 ' + Intnum + ' 이고, <br> 이 수의 두배는 ' + Intnum * 2 + '입니다.');
+        //문제 2. 입력받은 숫자를 3으로 나누고 몫과 나머지를 출력하시오.
+        let share = Intnum / 3
+        let rest = Intnum % 3
+        console.log('입력된 숫자의 몫은 ' + share + ' 이고, 나머지는 ' + rest + '입니다. <br>');
+        //문제 3. 입력받은 숫자(백의 자리까지) 백의 자릿수, 십의 자릿수, 일의 자릿수 출력
+        let num1 = Intnum / 100
+        let num2 = Intnum / 10 - Math.floor(num1) * 10
+        let num3 = Intnum - Math.floor(num2) * 10 - Math.floor(num1) * 100
+        // let num1 = Math.floor(Intnum / 100); // 백의 자리
+        // let num2 = Math.floor((Intnum % 100) / 10); // 십의 자리
+        // let num3 = Intnum % 10; // 일의 자리
+        console.log('입력받은 숫자의 백의 자리수는 ' + Math.floor(num1) + '이고 십의 자리수는 ' + Math.floor(num2) + '이고 일의 자리수는 ' + Math.floor(num3) + '입니다.');
+    </script>
+</head>
+<body>
+</body>
+</html>

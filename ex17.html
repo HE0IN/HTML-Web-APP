@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>조건문</title>
+    <script>
+        // 조건문 : 조건식에 따라 선택적인 수행을 해주는 문장
+        //        : if 문(70%), shitch문(30%)
+        // if 문 형식
+        // if (조건식){
+        //   조건식이 true일 떄 수행되는 수행문}
+        
+        // if ( 10 < 20){
+        //     document.write("10이 20보다 작음.");
+        // }
+        // if (10 == 20){
+        //     document.write("10이 20과 같음");
+        // }
+
+        // let str = "자바스크립트";
+        // if (str == "자바스크립트"){
+        //     document.write("자바스크립트와 같음");
+        // }
+        // // 등호 3개는 값과 타입까지 같은가
+        // if (str === "자바스크립트"){
+        //     document.write("자바스크립트와 같음");
+        // }
+        
+        // 연습문제 
+        //문제 1번. 10이 2의 배수이면 "2의 배수입니다." 라고 출력
+        // if ( 10 % 2 == 0){
+        //     document.write("10은 2의 배수입니다.<br>");
+        // }
+        // //문제 2번. 10이 3의 배수이면 "3의 배수입니다." 라고 출력
+        // if (10 % 3 == 0){
+        //     document.write("10은 3의 배수입니다.<br>");
+        // }else{
+        //     document.write("3의 배수가 아닙니다.<br>");
+        // }
+        // //문제 3번. prompt 함수로 '홍길동'을 입력받고, 입력받은 문자열이
+        // //          '홍길동'이면 "홍길동 입니다." 라고 출력하시오
+        // let str = prompt('이름을 입력하세요. ');
+        // if (str == '홍길동'){
+        //     document.write('홍길동 입니다.');
+        // }else{
+        //     document.write('홍길동이 아닙니다.');
+        // }
+        //문제 4번. prompt 함수로 5자리 숫자를 문자열로 입력받고
+        //          이 안에 홀수의 갯수를 출력하시오
+        //          예) "13234" 라면 홀수의 갯수는 3입니다. 라고 출력하시오.
+        //          for문 사용 가능, 또는 5번 검사
+        let num = prompt("숫자를 입력하세요")
+        let num1 = Math.floor(num/10000)
+        let num2 = Math.floor(num%10000 / 1000)
+        let num3 = Math.floor(num%1000 / 100)
+        let num4 = Math.floor(num%100 / 10)
+        let num5 = Math.floor(num%10)
+        document.write(num1 + ',' + num2 + ',' + num3 + ',' + num4 + ',' + num5 + '<br>');
+        
+        if(num1 % 2 == 1){
+            document.write(num1 + "은 홀수입니다. <br>")
+        }else{
+            document.write(num1 + "은 짝수입니다. <br>")
+        }
+        if(num2 % 2 == 1){
+            document.write(num2 + "은 홀수입니다. <br>")
+        }else{
+            document.write(num2 + "은 짝수입니다. <br>")
+        }
+        if(num3 % 2 == 1){
+            document.write(num3 + "은 홀수입니다. <br>")
+        }else{
+            document.write(num3 + "은 짝수입니다. <br>")
+        }
+        if(num4 % 2 == 1){
+            document.write(num4 + "은 홀수입니다. <br>")
+        }else{
+            document.write(num4 + "은 짝수입니다. <br>")
+        }
+        if(num5 % 2 == 1){
+            document.write(num5 + "은 홀수입니다. <br>")
+        }else{
+            document.write(num5 + "은 짝수입니다. <br>")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
