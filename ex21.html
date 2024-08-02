@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>switch 연습문제</title>
+    <script>
+    //랜덤수 발생시기키 Math.random()함수
+    //random()는 0.0 ~ 0.999... 까지의 임의의 실수를 반환
+    console.log(Math.random());
+    //0~9까지의 랜덤한 수
+    console.log(Math.floor(Math.random()*10)); //0.0 ~ 9.999...
+    //1~100까지의 랜덤수
+    console.log(Math.floor(Math.random()* 100)+1); //0~99 => 1 ~ 100
+    
+    //연습문제 1 - DM 제출
+    //1부터 100사이의 랜덤수를 발생시켜 출력하고
+    //이 수가 80이상이면, "80이상입니다."
+    //60 이상이면 "60이상입니다."
+    //40 아싱이면 "40이상입니다."
+    //그외의 수이면 "그 외의 수입니다." 라고 출력하시오.
+    let rannum = Math.floor(Math.random() * 100) + 1;
+    document.write("Random number: " + rannum + "<br>");
+    switch (true) {
+        case (rannum >= 80):
+            document.write("80 이상입니다. <br>");
+            break;
+        case (rannum >= 60):
+            document.write("60 이상입니다. <br>");
+            break;
+        case (rannum >= 40):
+            document.write("40 이상입니다. <br>");
+            break;
+        default:
+            document.write("그 외의 수입니다. <br>");
+            break;
+    }
+
+    //연습문제 2
+    //주사위를 2개 던져서, 주사위 눈의 수 2개의 합을 구하시오.
+    //그 수가 홀수이면, "홀수입니다."
+    //짝수 이면 "짝수입니다."
+    let rannum1 = (Math.floor(Math.random() * 100) + 1) % 7;
+    let rannum2 = (Math.floor(Math.random() * 100) + 1) % 7;
+    document.write("첫 번째 주사위: " + rannum1 + "<br>");
+    document.write("두 번째 주사위: " + rannum2 + "<br>");
+    let sum = rannum1 + rannum2;
+    document.write("주사위의 합: " + sum + "<br>");
+    if (sum % 2 == 1){
+        document.write("주사위의 합은 홀수입니다.<br>")
+    }else{
+        document.write("주사위의 합은 짝수입니다.<br>")
+    }
+    document.write("Random: " + Math.floor(Math.random() * 6 + 1) + "<br>");
+
+
+    </script>
+
+
+ </head>
+ <body>
+    
+ </body>
+ </html>
