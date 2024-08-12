@@ -56,23 +56,17 @@
         // 1부터 100까지 3이 들어가는 숫자의 개수 출력
         document.write("문제 5 : 1부터 100까지 3이 들어가는 숫자의 개수 출력. <br>");
         let sum = 0;
-
         for (let i = 1; i <= 100; i++) {
-            let str = String(i);
-            
-            // 숫자 문자열의 각 자리수를 확인
+            let str = String(i);  
             for (let j = 0; j < str.length; j++) {
                 if (str[j] === '3') {
                     sum++;
                 }
             }
-            
-            // 3이 포함된 숫자를 출력
             if (str.includes('3')) {
                 document.write(i + ", ");
             }
         }
-
         document.write("<br>3이 들어가는 숫자의 총 개수: " + sum);
 
 
