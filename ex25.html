@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ex25.html 반복문의 break, continue문</title>
+    <script>
+        // //break : 해당 회차(loop)에서 반복문을 탈출(exit)한다.
+        // //continue : 해당 회차(loop)를 중지하고, 회차(loop)처럼 증감문으로 이동.
+        // for (let i = 0 ; i < 5 ; i++){
+        //     console.log(i);
+        //     if(i == 3){ //반복변수 i가 3일 때 탈출.
+        //         console.log("i가 3일 때 탈출");
+        //         break; //반복문 탈출
+        //     }
+        // }
+
+        // for (let i = 0 ; i < 5 ; i++){
+        //     if(i % 2 == 0){ //2의 배수일 때는 증감문으로 이동
+        //         continue;
+        //     }
+        //     console.log(i); //홀수일 때는 출력됨.
+        // }
+
+        // //연습문제 - DM제출(소스와 결과출력)
+        // //1. break문을 이용하여 1부터 100까지 출력하되,
+        // //   반복변수 i가 50이 넘으면 출력을 중단하시오.
+        // document.write("연습문제 1번 <br>");
+        // for (let i = 1 ; i < 101 ; i++){
+        //     document.write(i + ", ");
+        //     if(i > 49){ //반복변수 i가 50일 때 탈출.
+        //         document.write("<br>");
+        //         document.write("i가 50일 때 탈출");
+        //         break; //반복문 탈출
+        //     }
+        // }
+        // document.write("<br><br>");
+        // //2. continue문을 이용하여 반복변수 i를 1부터 100중에
+        // //   3의 배수이거나 5의 배수을 때만 출력하시오.
+        // document.write("연습문제 2번 <br>");
+        // for (let i = 1 ; i < 101 ; i++){
+        //     if(i % 3 != 0 && i % 5 != 0){ 
+        //         continue;
+        //     }
+        //     document.write(i + ", ")
+        // }
+
+        // document.write("<br><br>");
+        // //2. continue문을 이용하여 반복변수 i를 1부터 100중에
+        // //   3의 배수이거나 5의 배수을 때만 출력하시오.
+        // document.write("연습문제 2번 <br>");
+        // for (let i = 1 ; i < 101 ; i++){
+        //     if(!(i % 3 == 0 || i % 5 == 0)){
+        //         continue;
+        //     }
+        //     document.write(i + ", ")
+        // }
+
+        // document.write("<br><br>");
+        //3. 영희가 징검다리를 건너고 있다.
+        // 돌에는 1부터 100까지 번호가 매겨져 있다.
+        // 끝자리가 3인 돌은 건너뛰고, 5의 배수인 돌도 건너 뛰고자 한다.
+        // 영희가 밟은 돌의 번호를 출력하고, 밟은 돌의 개수를 출력하시오.
+        let sum = 0;
+        document.write("연습문제 3번 <br>");
+        for (let i = 1 ; i < 101 ; i++){
+            if(i % 10 == 3 || i % 5 == 0){
+                continue;
+            }
+            document.write(i + ", ")
+            sum += 1;
+        }
+        document.write("<br>");
+        document.write("영희가 밟은 돌의 개수 : " + (sum))
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

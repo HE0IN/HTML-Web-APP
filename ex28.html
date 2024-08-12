@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>2차 배열</title>
+    <script>
+        //1차배열
+        let nums = [10, 20, 30];
+        //2차 배열
+        let nums2D = [//1열 2열 3열 COL(칸 j루프
+                        [10, 20, 30],
+                        [40, 50, 60],
+                        [70, 80, 90]];
+        // 행 인덱스, 열 인덱스
+        console.log(nums2D[0][0]);
+        console.log(nums2D[2][1]);
+
+        //nums2D.length : 행의 개수
+        //nums2D[0].length : 열의 개수
+        for(let i = 0 ; i < nums2D.length ; i++){
+            for(let j = 0 ; j < nums2D[0].length ; j++){
+                console.log(nums2D[i][j]);
+            }
+        }
+        
+        //연습문제 - DM 제출
+        //문제 1. nums2D의 모든 요소에서 최대값을 출력하시오.
+        document.write("문제 1 : nums2D의 모든 요소에서 최대값을 출력하시오.. <br>");
+        max = 0
+        for(let i = 0 ; i < nums2D.length ; i++){
+            for(let j = 0 ; j < nums2D[0].length ; j++){
+                if (max < nums2D[i][j]){
+                    max = nums2D[i][j]
+                };
+            }
+        }
+        document.write("요소 중 최대값 : " + max);
+        //문제 2. nums2D의 모든 요소의 합을 출력하시오.
+        document.write("<br><br>문제 2 : nums2D의 모든 요소의 합 출력하시오. <br>");
+        sum = 0
+        for(i = 0 ; i < nums2D.length ; i++){
+            for(let j = 0 ; j < nums2D[0].length ; j++){
+                sum += nums2D[i][j];
+            }
+        }
+        document.write("모든 요소의 합 : " + sum);
+        //문제 3. 학생정보를 담고있는 2차배열을 선언하고, 영어 점수가 가장 높은 학생의 이름을 출력하시오.
+        document.write("<br><br>문제 3 : 영어 점수가 가장 높은 학생의 이름을 출력하시오. <br>");
+        let students = [  //학번 이름  영어점수 나이
+                            [1, '홍길동', 70, 20],
+                            [2, '변사또', 60, 30],
+                            [3, '사임당', 50, 40],
+                            [4, '김진사', 90, 50]];
+        max = 0
+        for(i = 0; i < students.length ; i++){
+            if (max < students[i][2]){
+                max = students[i][2]
+            }
+        }
+        for(i = 0; i< students.length ; i++){
+            if (max == students[i][2]){
+               document.write("영어 점수가 가장 높은 학생 : " + students[i][1])
+            }
+        }
+        //문제 4. 전체학생의 평균 나이를 출력하시오.(소수점 제거)
+        document.write("<br><br>문제 4 : 전체학생의 평균 나이를 출력하시오.(소수점 제거). <br>");
+        sum = 0
+        for(i = 0 ; i < students.length ; i++){
+            sum += students[i][3];
+        }
+        document.write("전체 학생 나이의 평균 : " + sum/students.length);
+        //문제 5. 영어점수가 가장 높은 학생부터 학생 이름과 영어 점수를 출력하시오. (* push()함수 : 배열 요소 추가)
+        //출력 예) 1. 김진사 90, 2. 홍길동 70, 3. 변사또 60, 4. 사임당 50
+        document.write("<br><br>문제 5. 영어점수가 가장 높은 학생부터 학생 이름과 영어 점수를 출력하시오. <br>");
+        for ( let i = 0 ; i < students.length - 1; i++){
+            let maxnum = i;
+            for (let j = i + 1 ; j < students.length; j++){
+                if (students[j][2] > students[maxnum][2]){
+                    maxnum = j;
+                }
+            }
+            if (maxnum != i){
+                let temp = students[i];
+                students[i] = students[maxnum];
+                students[maxnum] = temp;
+            }
+        }
+        document.write("영어 석차 : <br>");
+        for (let i = 0; i < students.length; i++) {
+            document.write((i + 1) + ". " + students[i][1] + " " + students[i][2] + "<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

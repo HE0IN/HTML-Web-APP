@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>반복문 for, while, do while</title>
+    <script>
+        //for문 형식
+        //for (초기화 ; 조건식; 증감문){}
+        //      조건식이 참일 때 실행문
+
+        //while문 형식
+        let i = 0;
+        while (i < 5){
+            console.log(i);
+            i++
+        }
+
+        //연습문제 - DM제출
+        //1. -10부터 10까지 1씩 증가하는 while문을 만들고 i 변수 출력
+        document.write("문제 1 : -10부터 10까지 1씩 증가하는 while문을 만들고 i 변수 출력 <br>");
+        i = -10;
+        while(i < 11){
+            document.write(i + ", ");
+            i++
+        }
+
+        document.write("<br><br>")
+        //2. 0부터 10까지 3씩 증가하는 while문, 출력
+        document.write("문제 2 : 0부터 10까지 3씩 증가하는 while문, 출력 <br>");
+        i = 0;
+        while(i < 11){
+            document.write(i + ", ")
+            i += 3;
+        }
+
+        document.write("<br><br>")
+        //3. 10부터 -20까지 -5씩 감소하는 while문, 출력
+        document.write("문제 3 : 10부터 -20까지 -5씩 감소하는 while문, 출력 <br>");
+        i = 10;
+        while(i > -21){
+            document.write(i + ", ")
+            i -= 5
+        }
+
+        document.write("<br><br>")
+        //4. 1부터 100까지 3의 배수만 출력하기
+        document.write("문제 4 : 1부터 100까지 3의 배수만 출력하기 <br>");
+        i = 1;
+        while (i < 101){
+            if(i % 3 == 0 ){
+                document.write(i + ", ")
+            }
+            i++;
+        }
+
+        document.write("<br><br>")
+        // 1부터 100까지 3이 들어가는 숫자의 개수 출력
+        document.write("문제 5 : 1부터 100까지 3이 들어가는 숫자의 개수 출력. <br>");
+        let sum = 0;
+
+        for (let i = 1; i <= 100; i++) {
+            let str = String(i);
+            
+            // 숫자 문자열의 각 자리수를 확인
+            for (let j = 0; j < str.length; j++) {
+                if (str[j] === '3') {
+                    sum++;
+                }
+            }
+            
+            // 3이 포함된 숫자를 출력
+            if (str.includes('3')) {
+                document.write(i + ", ");
+            }
+        }
+
+        document.write("<br>3이 들어가는 숫자의 총 개수: " + sum);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
