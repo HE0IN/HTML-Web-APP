@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>키 - 벨류 객체</title>
+    <script>
+        //Key-Value Object = 객체
+        //Key는 반드시 문자열, value는 다양한 타입(number, string, object, func)
+        //map, dictionary(key : value), JSON/XML
+
+        let Keyvalue = {
+            apple : 1000,
+            banana : 2000,
+            pear : 3000
+        };
+        console.log(Keyvalue['apple']);
+        console.log(Keyvalue.apple);
+
+        let person = {
+            name : '홍기동',
+            action : () => {console.log("야호~");
+            }
+        }
+        
+        console.log( person.name);
+        person.action();
+        
+        //연습문제
+        // student KV객체를 선언하고,
+        // 이 학생의 국어, 영어, 수학 성적을 각각 70, 80,90으로 설정하고,
+        // 합산과 평균을 내는 익명함수를 각각 sum, avr로 설정하고,
+        // 익명함수를 통해, sum과 avr값을 출력하시오.
+        // 그리고 국어,영어,수학 점수도 각각 출력하시오.
+
+        let student = {
+            korean : 70,
+            english : 80,
+            math : 90,
+            sum : (a, b, c) => { return a + b + c},
+            avr : (a, b, c) => (a + b + c)/3          //한 줄이면 중괄호 생략가능, 리턴 생략가능
+        }
+        // let sum = function(num1, num2, num3) {
+        //     return (num1 + num2 + num3);
+        // };
+        // let avr = function(num1, num2, num3) {
+        //     return (sum(num1,num2,num3)/3);
+        // };
+        document.write("국어점수 : " + student.korean + ", 영어점수 : " + student.english + ", 수학점수 : " + student.math)
+        document.write("<br>모든 점수 함산 : " + student.sum(student.korean, student.english, student.math))
+        document.write("<br>점수의 평균 : " + student.avr(student.korean, student.english, student.math))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>타이머 관련 함수</title>
+    <script>
+        //setTimeout : 일정시간 한 번 호출
+        //setInterval : 일정시간마다 주기적으로 호출
+
+        setTimeout(() => {
+            console.log("3. setTimer 호출됨.");
+        }, 3000);
+        setTimeout(() => {
+            console.log("2. setTimer 호출됨.");
+        }, 2000);
+        setTimeout(() => {
+            console.log("1. setTimer 호출됨.");
+        }, 1000);
+
+        //타이머를 지울 때
+        let timer = setTimeout(() => {
+            console.log("4. setTimer 호출됨.");
+        }, 1000);
+
+        clearTimeout(timer);
+
+        //1초 간격으로 수행되는 코드
+        setInterval(() => {
+            // console.log(Date());
+            // HH:MM:SS
+            console.log( new Date().toTimeString().split(' ')[0]);
+            //YYYY-MM-DD
+            console.log( new Date().toISOString().split('T')[0]);
+            
+        }, 1000);
+
+        //인터벌을 지울 때
+        clearInterval(interval);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
